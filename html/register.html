@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrarse - TuGimnasioEnCasa</title>
+  <link rel="stylesheet" href="/css/style2.css">
+</head>
+<body>
+   <!-- Barra de Navegación -->
+   <header class="navbar">
+    <div class="container">
+      <h1 class="logo">TuGimnasioEnCasa</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="/html/catalogo.html">Catalogo</a></li>
+          <li><a href="/html/aboutUs.html">Quienes Somos</a></li>
+          <li><a href="/html/contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="register-form">
+    <div class="container">
+      <h2>Registrarse</h2>
+      <form>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="surname">Apellidos:</label>
+        <input type="text" id="surname" name="surname" required>
+        
+        <label for="username">Nombre de Usuario:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <label for="confirm-password">Confirmar Contraseña:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+        
+        <label>
+          <input type="checkbox" id="age-confirm" name="age-confirm" required> Soy mayor de 18 años
+        </label>
+        
+        <button type="submit" class="btn">Registrarse</button>
+      </form>
+      <p>¿Ya tienes una cuenta? <a href="/html/login.html">Inicia sesión aquí</a>.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 TuGimnasioEnCasa. Todos los derechos reservados.</p>
+      <div class="footer-links">
+        <a href="/index.html">Inicio</a>
+        <a href="#"><img src="/img/Facebook.png" alt="Facebook"></a>
+        <a href="#"><img src="/img/insta.png" alt="Instagram"></a>
+        <a href="#"><img src="/img/twitter.webp" alt="Twitter"></a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
