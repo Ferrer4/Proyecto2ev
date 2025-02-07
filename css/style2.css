@@ -17,7 +17,7 @@ body {
   
 /* Barra de Navegación */
 .navbar {
-    background: #333;
+    background: #000000;
     color: #fff;
     padding: 1rem 0;
   }
@@ -53,6 +53,10 @@ body {
   .nav-links a:hover {
     color: #007BFF;
   }
+
+  .nav-links a.active {
+    color: #007BFF; /* Color azul para el enlace activo */
+  }
   
   .buttons1 {
     display: flex;
@@ -73,10 +77,16 @@ body {
   
   /* Banner */
   .banner {
-    background-color: #007BFF;
+    background-image: url("/img/Fondo2.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
     color: #fff;
     text-align: center;
-    padding: 5rem 0;
+    padding: 30rem 0;
+  }
+
+  .banner img{
+    border: #000000 2px solid;
   }
   
   .banner-text h2 {
@@ -88,6 +98,77 @@ body {
     font-size: 1.2rem;
     margin: 1rem 0 0;
   }
+
+  /*Productos de la semana*/
+  .productos-ind {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.productos-ind h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.productos-grid-ind {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.producto-ind {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    width: calc(30% - 2rem);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 1rem;
+}
+
+.producto-ind:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.producto-ind img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.producto-ind h3 {
+    font-size: 1.8rem;
+    color: #007BFF;
+    margin-bottom: 0.5rem;
+}
+
+.producto-ind p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.producto-ind .btn {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.producto-ind .btn-ind:hover {
+    background-color: #0056b3;
+}
+
   
   /* Sección Quienes Somos */
   .about-us {
@@ -112,7 +193,7 @@ body {
     text-align: left;
   }
   
-  /* Sección de Productos */
+  /* Catalogo */
   .productos {
     padding: 2rem 0;
     text-align: center;
@@ -204,15 +285,95 @@ body {
   .login-form button:hover, .register-form button:hover, .formulario-pago button:hover {
     background: #0056b3;
   }
+
+  /* Estilos para la sección about-us dividida */
+.about-content {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-info, .about-mapa {
+  flex: 1;
+}
+
+.about-info img {
+  max-width: 40%;
+  border-radius: 10px;
+}
+
+.about-mapa iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+}
   
   /* Página de Catálogo */
-  .catalogo {
-    padding: 2rem 0;
-  }
-  
-  .catalogo .productos-grid {
-    justify-content: space-around;
-  }
+  /* Estilos para las categorías */
+.categoria {
+  margin-bottom: 3rem;
+}
+
+.categoria h3 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #007BFF;
+  padding-bottom: 0.5rem;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.producto {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 40%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.producto img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.producto h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.producto p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.producto .btn {
+  background-color: #007BFF;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.producto .btn:hover {
+  background-color: #0056b3;
+}
   
   /* Página de Producto */
   .producto-detalle {
@@ -235,6 +396,20 @@ body {
   
   .columna-derecha p {
     margin: 1rem 0;
+  }
+
+  .columna-derecha .btn {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+    .columna-izquierda img {
+    max-width: 100%;
+    border-radius: 10px;
   }
   
   /* Página de Pago */
@@ -269,25 +444,48 @@ body {
   
   /* Pie de Página */
   .footer {
-    background: #333;
+    background: #000000;
     color: #fff;
-    text-align: center;
-    padding: 1rem 0;
+    padding: 2rem 0;
   }
   
-  .footer-links {
-    margin-top: 1rem;
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: 2rem;
   }
   
-  .footer-links a {
-    margin: 0 0.5rem;
+  .footer-section h3 {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-section ul li a {
     color: #fff;
     text-decoration: none;
   }
   
-  .footer-links img {
+  .footer-section ul li a:hover {
+    color: #007BFF;
+  }
+  
+  .social-links img {
     width: 24px;
-    vertical-align: middle;
+    margin-right: 1rem;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
   }
 
 
@@ -383,63 +581,92 @@ body {
   background: #fff;
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: left;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .info-contacto h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  color: #333;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #007BFF;
 }
 
 .info-contacto p {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 .info-contacto p strong {
-  color: #333;
+  color: #000;
 }
+
+.info-contacto img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-top: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
 
 /* Media Queries */
 /* index */
-@media (max-width: 768px) {
-  .navbar .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
-  }
-
-  .buttons1 {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .productos-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .producto {
-    width: 80%;
-  }
-
-  .about-content {
-    flex-direction: column;
+  @media (max-width: 768px) {
+    .banner{
+      background-image: url("/img/Fondo2.jpg");
+      background-color: #000000;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: #fff;
     text-align: center;
+    padding: 5rem 0;
+    }
+    .navbar .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+    }
+  
+    .buttons1 {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  
+    .productos-grid-ind {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+  
+    .producto-ind {
+      width: 90%;
+      max-width: 600px;
+      margin-bottom: 1rem;
+    }
+  
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-content img {
+      margin-bottom: 1rem;
+    }
   }
+  
 
-  .about-content img {
-    margin-bottom: 1rem;
-  }
-}
 
 /* About us */
 @media (max-width: 768px) {
@@ -512,15 +739,19 @@ body {
 
   .contacto-contenido {
     flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
   }
 
   .formulario-contacto,
   .info-contacto {
-    width: 100%;
+    width: 90%;
+    max-width: 600px;
     margin-bottom: 2rem;
   }
 }
-
 /* Login */
 @media (max-width: 768px) {
   .navbar .container {

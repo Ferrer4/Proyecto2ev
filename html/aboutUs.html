@@ -15,7 +15,7 @@
         <ul class="nav-links">
           <li><a href="/index.html">Inicio</a></li>
           <li><a href="/html/catalogo.html">Catalogo</a></li>
-          <li><a href="/html/aboutUs.html">Quienes Somos</a></li>
+          <li><a href="/html/aboutUs.html" class="active">Quienes Somos</a></li>
           <li><a href="/html/contacto.html">Contacto</a></li>
         </ul>
       </nav>
@@ -26,17 +26,31 @@
     </div>
   </header>
 
-  <!-- Sección Quiénes Somos -->
-  <section id="" class="about-us">
+
+  <section class="about-us">
     <div class="container">
       <h2>¿Quiénes Somos?</h2>
       <div class="about-content">
-        <img src="/img/usuario.png" alt="Imagen de la empresa">
-        <p>
-          En TuGimnasioEnCasa, nos dedicamos a ofrecer productos de alta calidad para satisfacer las necesidades de nuestros clientes. 
-          Con años de experiencia en el mercado, somos líderes en ventas y en el servicio al cliente. Nuestro objetivo es brindarte 
-          las mejores herramientas para que puedas entrenar desde la comodidad de tu hogar, con equipos duraderos y seguros.
-        </p>
+        <div class="about-info">
+          <img src="/img/usuario.png" alt="Imagen de la empresa">
+          <p>
+            En TuGimnasioEnCasa, nos dedicamos a ofrecer productos de alta calidad para satisfacer las necesidades de nuestros clientes. 
+            Con años de experiencia en el mercado, somos líderes en ventas y en el servicio al cliente. Nuestro objetivo es brindarte 
+            las mejores herramientas para que puedas entrenar desde la comodidad de tu hogar, con equipos duraderos y seguros.
+          </p>
+        </div>
+
+        <div class="about-mapa">
+          <h3>Ubicación</h3>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.269722386753!2d-0.376322684633887!3d39.46947697950038!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd604f4cf0efb06f%3A0xbcd2a3e5d0e2f3e5!2sValencia%2C%20Espa%C3%B1a!5e0!3m2!1ses!2sus!4v1699470000000!5m2!1ses!2sus"
+            width="100%"
+            height="300"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
+        </div>
       </div>
     </div>
   </section>
@@ -44,13 +58,30 @@
   <!-- Pie de Página -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 TuGimnasioEnCasa. Todos los derechos reservados.</p>
-      <div class="footer-links">
-        <a href="/index.html">Inicio</a>
-        <a href="#"><img src="/img/Facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="/img/insta.png" alt="Instagram"></a>
-        <a href="#"><img src="/img/twitter.webp" alt="Twitter"></a>
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>TuGimnasioEnCasa</h3>
+          <p>Transforma tu hogar en tu propio gimnasio con nuestros productos de alta calidad.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Enlaces Rápidos</h3>
+          <ul>
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/html/catalogo.html">Catálogo</a></li>
+            <li><a href="/html/aboutUs.html">Quiénes Somos</a></li>
+            <li><a href="/html/contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Redes Sociales</h3>
+          <div class="social-links">
+            <a href="#"><img src="/img/Facebook.png" alt="Facebook"></a>
+            <a href="#"><img src="/img/insta.png" alt="Instagram"></a>
+            <a href="#"><img src="/img/twitter.webp" alt="Twitter"></a>
+          </div>
+        </div>
       </div>
+      <p class="footer-bottom">&copy; 2025 TuGimnasioEnCasa. Todos los derechos reservados.</p>
     </div>
   </footer>
 </body>
